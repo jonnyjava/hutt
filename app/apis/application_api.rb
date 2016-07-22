@@ -3,6 +3,7 @@ class ApplicationApi < Grape::API
   extend Napa::GrapeExtenders
 
   mount HelloApi => '/'
+  mount VinNumbersApi => '/vin_number'
 
   add_swagger_documentation
 end
