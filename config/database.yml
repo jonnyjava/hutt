@@ -1,0 +1,19 @@
+defaults: &defaults
+  encoding: utf8
+  adapter: postgresql
+  host: localhost
+  username: hutt
+  password: hutt
+  database: hutt
+
+production:
+  <<: *defaults
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
