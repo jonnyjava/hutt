@@ -11,3 +11,6 @@ coverage
 !.keep
 .ruby-gemset
 .ruby-version
+private/*
+hutt.sublime-project
+hutt.sublime-workspace
