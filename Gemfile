@@ -11,6 +11,10 @@ gem 'napa', '~> 0.5.0'
 gem 'roar', '~> 0.12.0'
 gem 'grape-swagger'
 gem 'grape-entity'
+gem 'capybara'
+gem 'capybara-webkit'
+gem 'selenium-webdriver'
+gem 'launchy', '~> 2.4', '>= 2.4.3'
 
 group :development,:test do
   gem 'pry'

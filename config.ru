@@ -11,8 +11,7 @@ require './app'
 # end
 #
 # use Honeybadger::Rack::ErrorNotifier
-# use Napa::Middleware::Logger
-
+use Napa::Middleware::Logger
 use Napa::Middleware::AppMonitor
 # Uncomment to require header passwords for all requests
 # use Napa::Middleware::Authentication
