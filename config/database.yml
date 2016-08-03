@@ -2,9 +2,9 @@ defaults: &defaults
   encoding: utf8
   adapter: postgresql
   host: localhost
-  username: hutt
-  password: hutt
-  database: hutt
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD']%>
+  database: <%= ENV['DB_DATABASE']%>
 
 production:
   <<: *defaults
