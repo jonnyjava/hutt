@@ -1,4 +1,5 @@
 class VinNumber < ActiveRecord::Base
+  has_many :properties
 
   def self.find_or_create_by_vin_number(vin)
     vin_number = VinNumber.where(vin: vin)
