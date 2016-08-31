@@ -1,24 +1,17 @@
 $LOAD_PATH << '.'
 
 require "capybara"
+require 'capybara/poltergeist'
 require "capybara/dsl"
-require "capybara-webkit"
 require "launchy"
+
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, js_errors: false)
+end
 
 Capybara.configure do |config|
   config.run_server = false
-  config.current_driver = :webkit
-  config.javascript_driver = :webkit
-end
-
-Capybara::Webkit.configure do |config|
-  config.allow_url("http://en.vindecoder.pl/")
-  config.block_unknown_urls
-  config.debug = false
-  #config.use_proxy(
-  #  host: '164.132.57.130',
-  #  port: 3128
-  #)
+  config.current_driver = :poltergeist
 end
 
 class VinScrapper
