@@ -18,3 +18,5 @@ use Napa::Middleware::AppMonitor
 use ActiveRecord::ConnectionAdapters::ConnectionManagement
 
 run ApplicationApi
+
+Napa::Logger.logger.debug '----------FUNZIONA?'
