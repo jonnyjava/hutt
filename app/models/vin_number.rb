@@ -2,18 +2,15 @@ class VinNumber < ActiveRecord::Base
   has_many :properties
 
   def self.find_or_create_by_vin_number(vin)
-    vin_number = VinNumber.where(vin: vin)
-puts "-------------------------1"
+    vin_number = VinNumber.find_by_vin(vin)
     if !vin_number.present?
-puts "-------------------------2"
       vin_number = self.create!(vin: vin)
-puts "-------------------------3"
       properties = self.get_from_outside(vin)
-puts "-------------------------4"
       Property.save_list(vin_number.id, properties)
-puts "-------------------------5"
+    elsif vin_number.properties.blank?
+      properties = self.get_from_outside(vin)
+      Property.save_list(vin_number.id, properties)
     end
-puts "-------------------------6"
     vin_number
   end
 
