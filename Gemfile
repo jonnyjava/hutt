@@ -24,6 +24,7 @@ group :development do
   gem 'shotgun', require: false
   gem 'capistrano'
   gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
 end
 
 group :test do
