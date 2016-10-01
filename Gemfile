@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby "2.2.3"
 
 gem 'rack-cors'
-gem 'pg'
+gem 'mysql2'
 gem 'activerecord', '~> 4.2.0', :require => 'active_record'
 gem 'hashie-forbidden_attributes'
 gem 'honeybadger', '~> 1.16.7'
