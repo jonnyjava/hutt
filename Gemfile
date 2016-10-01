@@ -22,6 +22,8 @@ end
 group :development do
   gem 'rubocop', require: false
   gem 'shotgun', require: false
+  gem 'capistrano'
+  gem 'capistrano-bundler'
 end
 
 group :test do
