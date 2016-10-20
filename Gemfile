@@ -14,7 +14,6 @@ gem 'grape-entity'
 gem 'capybara'
 gem 'launchy', '~> 2.4', '>= 2.4.3'
 gem 'poltergeist'
-gem 'puma'
 
 group :development,:test do
   gem 'pry'
@@ -26,7 +25,6 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-bundler'
   gem 'capistrano-rvm'
-  gem 'capistrano3-puma'
 end
 
 group :test do

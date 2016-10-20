@@ -7,7 +7,7 @@ class ApplicationApi < Grape::API
   resource '/' do
     desc 'Return a message'
     get do
-      { message: 'Han, I can’t make exceptions!' }
+      { message: 'Han, I can\'t make exceptions!' }
     end
   end
   add_swagger_documentation
